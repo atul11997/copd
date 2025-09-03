@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no user-scalable=no">
+  <title>Psoriasis</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 500px;  /* optional: responsive container */
+      margin: 0 auto;
+    }
+
+    .bg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .logo {
+      position: absolute;
+      top: 39%;   /* % value based on circle ke position */
+      left: 50%;  /* horizontally center */
+      transform: translate(-50%, -50%);
+      width: 50%; /* responsive: jitna circle ka size hai */
+      aspect-ratio: 1;
+      border-radius: 50%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .ownername {
+      position: absolute;
+      top: 19.5%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.2rem;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <img src="image/page4.png" alt="Background" class="bg">
+    <h2 class="ownername">Atul Patel</h2>
+      <img src="image/default_image.png" alt="Profile" class="logo">
+  </div>
+</body>
+</html>
