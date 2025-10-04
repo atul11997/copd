@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no user-scalable=no"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+      integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs="
+      crossorigin="anonymous"
+    ></script>
+    <title>COPD</title>
+    <style>
+      * {
+        margin: 0;
+      }
+
+      .top-bg-image {
+        background: url("image/page5/bck.png") no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        background-attachment: fixed;
+        background-position: 0 0;
+      }
+
+      .text-img {
+        position: fixed;
+        top: 12%; /* अब top से 20px का gap रहेगा */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80vw;
+        max-width: 300px;
+        height: auto;
+        object-fit: contain;
+        text-align: center;
+      }
+
+.heading-img {
+    position: fixed;
+    top: 20%;           /* Stick to top */
+    left: 50%;        /* Center horizontally */
+    transform: translateX(-50%); /* Perfect center */
+    width: 100%;      /* Full width by default */
+    max-width: 500px; /* Optional: cap max width */
+    height: 300px;     /* Maintain aspect ratio */
+    text-align: center;
+    z-index: 999;     /* Stay on top of other elements */
+}
+
+.bg-circle {
+    position: fixed;
+    top: 30%;                 
+    left: 50%;
+    transform: translateX(-50%);  /* Keep perfectly centered */
+    width: clamp(80px, 90%, 300px); /* Min 80px, ideal 90% of viewport, max 600px */
+    height: auto;                
+    text-align: center;
+}
+
+.home {
+  position: fixed;
+  bottom: 20%;               /* Distance from bottom of viewport */
+  right: 10%;     
+  display: inline-block;
+  padding: 10px 20px;
+  background: #4CAF50;   /* Button background color */
+  color: white;          /* Text color */
+  text-decoration: none; /* Remove underline */
+  border-radius: 8px;    /* Rounded corners */
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.home:hover {
+  background: #45a049;  /* Darker green on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.home:active {
+  background: #3e8e41;  /* Even darker when clicked */
+  transform: scale(0.95);
+}
+
+.para {
+    position: fixed;
+    top: 40%;               /* Distance from bottom of viewport */
+    left: 50%;                /* Align right side */
+    transform: translateX(-50%);
+    width: 400px; /* Responsive width: min 50px, ideal 15vw, max 150px */
+    height: auto;             /* Maintain aspect ratio */
+    object-fit: contain;      /* Avoid distortion */
+    z-index: 999;             /* Stay above other elements */
+    animation: none;          /* Remove animation */
+}
+.drname{
+  position: fixed;
+    top: 21.2%;               /* Distance from bottom of viewport */
+    left: 50%;                /* Align right side */
+    transform: translateX(-50%);
+    font-size: 25px;
+    object-fit: contain;      /* Avoid distortion */
+    z-index: 999;             /* Stay above other elements */
+}
+@media screen and (max-width: 480px){
+    .text-img {
+        position: fixed;
+        top: 12%; /* अब top से 20px का gap रहेगा */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80vw;
+        max-width: 200px;
+        height: auto;
+        object-fit: contain;
+        text-align: center;
+      }
+    .heading-img {
+    position: fixed;
+    top: 20%;           /* Stick to top */
+    left: 50%;        /* Center horizontally */
+    transform: translateX(-50%); /* Perfect center */
+    width: 100%;      /* Full width by default */
+    max-width: 300px; /* Optional: cap max width */
+    height: auto;     /* Maintain aspect ratio */
+    text-align: center;
+    z-index: 999;     /* Stay on top of other elements */
+  }
+
+  .bg-circle {
+    position: fixed;
+    top: 25%;                 
+    left: 50%;
+    transform: translateX(-50%);  /* Keep perfectly centered */
+    width: 250px; /* Min 80px, ideal 90% of viewport, max 600px */
+    height: auto;                
+    text-align: center;
+  }
+
+  .para {
+    position: fixed;
+    top: 40%;               /* Distance from bottom of viewport */
+    left: 50%;                /* Align right side */
+    transform: translateX(-50%);
+    width: 300px; /* Responsive width: min 50px, ideal 15vw, max 150px */
+    height: auto;             /* Maintain aspect ratio */
+    object-fit: contain;      /* Avoid distortion */
+    z-index: 999;             /* Stay above other elements */
+    animation: none;          /* Remove animation */
+}
+
+.home {
+  position: fixed;
+  bottom: 25%;               /* Distance from bottom of viewport */
+  right: 10%;     
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background: #4CAF50;   /* Button background color */
+  color: white;          /* Text color */
+  text-decoration: none; /* Remove underline */
+  border-radius: 8px;    /* Rounded corners */
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.home:hover {
+  background: #45a049;  /* Darker green on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.home:active {
+  background: #3e8e41;  /* Even darker when clicked */
+  transform: scale(0.95);
+}
+  
+.drname{
+  position: fixed;
+    top: 20%;               /* Distance from bottom of viewport */
+    left: 50%;                /* Align right side */
+    transform: translateX(-50%);
+    font-size: 15px;
+    object-fit: contain;      /* Avoid distortion */
+    z-index: 999;             /* Stay above other elements */
+}
+}
+
+    </style>
+  </head>
+
+  <body>
+    <div class="top-bg-image"></div>
+    <img src="image/page5/01.png" alt="" class="text-img" />
+     <img src="image/page5/02.png" alt="" class="heading-img" /> 
+     <span class="drname" id="name">Loading...</span>
+    <img src="image/page5/03.png" alt="" class="bg-circle" />
+    <img src="image/page5/04.png" alt="" class="para" />
+    <a href="index.html" class="home">Home</a>
+    
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    $.ajax({
+        url: "https://copd-one.vercel.app/api/get-all-records.js",
+        method: "GET",
+        dataType: "json",
+        success: function(data) {
+            if (data.length > 0) {
+                // Last record nikal rahe hain
+                var lastRecord = data[data.length - 1];
+                
+                // drname ko span me show kar rahe hain
+                $("#name").text(lastRecord.drname);
+            } else {
+                $("#name").text("No records found");
+            }
+        },
+        error: function(xhr, status, error) {
+            console.error("Error fetching data:", error);
+            $("#name").text("Error fetching data");
+        }
+    });
+});
+</script>
+
+  </body>
+</html>

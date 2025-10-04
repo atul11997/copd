@@ -1,56 +1,396 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no user-scalable=no">
-  <title>Psoriasis</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no user-scalable=no"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+      integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs="
+      crossorigin="anonymous"
+    ></script>
+    <title>COPD</title>
+    <style>
+      * {
+        margin: 0;
+      }
 
-    .wrapper {
-      position: relative;
-      width: 100%;
-      max-width: 500px;  /* optional: responsive container */
-      margin: 0 auto;
-    }
+      .top-bg-image {
+        background: url("image/page3/bck.png") no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        background-attachment: fixed;
+        background-position: 0 0;
+      }
 
-    .bg {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
+      .text-img {
+        position: fixed;
+        top: 13%; /* अब top से 20px का gap रहेगा */
+        left: 70%;
+        transform: translateX(-50%);
+        width: 80vw;
+        max-width: 300px;
+        height: auto;
+        object-fit: contain;
+        text-align: center;
+      }
 
+.top-row {
+    display: flex;
+    justify-content: space-between; /* Left stacked, right aligned */
+    align-items: center;            /* Vertical alignment */
+    position: fixed;
+    top: 20%;                        /* Adjust distance from top */
+    left: 2%;
+    right: 2%;
+    width: 96%;
+    z-index: 999;
+}
+
+.top-left {
+    display: flex;
+    flex-direction: column;         /* Stack heading + bg-circle vertically */
+    align-items: flex-start;        /* Align to left */
+    gap: 0.5rem;                    /* Space between number and circle */
+}
+
+.top-right {
+    display: flex;               /* Make it a flex container */
+    flex-direction: column;      /* Stack children vertically if needed */
+    align-items: flex-end; 
+}
+
+/* Gradient text for heading */
+.heading-img {
+    font-size: 80px;  
+    font-weight: bold;
+    background: linear-gradient(90deg, #00f, #0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* bg-circle */
+.bg-circle {
+    width: 300px;  
+    height: auto;
+    object-fit: contain;
+}
+
+/* para image on the right */
+.para {
+    width: 400px;  
+    height: auto;
+    object-fit: contain;
+}
+
+
+.logo {
+    position: fixed;
+    bottom: 10%;           /* Distance from bottom, relative to viewport */
+    right: 10%;            /* Distance from right, relative to viewport */
+    width: 200px;  /* Fluid width: min 50px, ideal 10vw, max 150px */
+    height: auto;         /* Maintain aspect ratio */
+    z-index: 999;         /* Stay above other elements */
+    animation: none;      /* Remove animation */
+}
+
+/* Main fingerprint image */
+.fingerprint {
+    position: fixed;
+    top: 50%;
+    left: 50%;                     /* Center horizontally */
+    transform: translateX(-50%);   /* Perfect horizontal center */
+    width: 105px;
+    height: 105px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+/* Scan container */
+.scan {
+    position: fixed;
+    top: 50%;
+    left: 50%;                     /* Center horizontally */
+    transform: translateX(-50%);   /* Perfect horizontal center */
+    width: 22vw;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+}
+
+
+        .scan .fingerprint {
+            /* position: relative;
+            top: 75%;
+            left: 35%; */
+            width: 105px;
+            height: 105px;
+            background: url("image/page4/04.png");
+            background-size: 105px;
+        }
+        
+
+        .scan .fingerprint::before {
+           content: '';
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           background: url("image/12.png");
+           background-size: cover;
+           animation: animate 4s ease-in-out infinite;
+        }
+
+        @keyframes animate {
+          0%,
+          100% {
+            height: 0%;
+          }
+          50% {
+            height: 100%;
+          }
+        }
+
+.scan .fingerprint::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: #3fefef;
+  background-size: cover;
+  border-radius: 8px;
+  filter: drop-shadow(0 0 20px #3fefef) drop-shadow(0 0 60px #3fefef);
+  animation: animate_line 4s ease-in-out infinite;
+}
+
+@keyframes animate_line {
+  0%,
+  100% {
+    top: 0%;
+  }
+  50% {
+    top: 100%;
+  }
+}
+.scan h3 {
+  text-transform: uppercase;
+  font-size: 1.3em;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  color: #cc4413;
+  font-family: sans-serif;
+  filter: drop-shadow(0 0 20px #3fefef) drop-shadow(0 0 60px #3fefef);
+  animation: animate_text 1s steps(1) infinite;
+  text-align: center;
+}
+@keyframes animate_text {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+ .animated {
+            animation: fingerprintAnimation 3s alternate, colorChange 4s infinite;
+            transform-origin: center;
+        }
+
+        @keyframes fingerprintAnimation {
+            0% {
+                transform: scale(1);
+            }
+
+            30%{
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1.2);
+            }
+        }
+
+        @keyframes colorChange {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 22vw;
+            background-color: rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            transition: opacity 1s;
+            z-index: 2;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .overlay.active {
+            opacity: 1;
+        }
+
+@media screen and (max-width: 480px){
     .logo {
-      position: absolute;
-      top: 39%;   /* % value based on circle ke position */
-      left: 50%;  /* horizontally center */
-      transform: translate(-50%, -50%);
-      width: 50%; /* responsive: jitna circle ka size hai */
-      aspect-ratio: 1;
-      border-radius: 50%;
-      object-fit: cover;
-      z-index: -1;
+    position: fixed;
+    bottom: 10%;           /* Distance from bottom, relative to viewport */
+    right: 10%;            /* Distance from right, relative to viewport */
+    width: 100px;  /* Fluid width: min 50px, ideal 10vw, max 150px */
+    height: auto;         /* Maintain aspect ratio */
+    z-index: 999;         /* Stay above other elements */
+    animation: none;      /* Remove animation */
+    }
+    .text-img {
+        position: fixed;
+        top: 13%; /* अब top से 20px का gap रहेगा */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80vw;
+        max-width: 200px;
+        height: auto;
+        object-fit: contain;
+        text-align: center;
     }
 
-    .ownername {
-      position: absolute;
-      top: 19.5%;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 1.2rem;
-      color: #000;
+    .top-row {
+    display: block;
+    justify-content: space-between; /* Left stacked, right aligned */
+    align-items: center;            /* Vertical alignment */
+    position: fixed;
+    top: 20%;                        /* Adjust distance from top */
+    left: 2%;
+    right: 2%;
+    width: 100%;
+    z-index: 999;
     }
-  </style>
-</head>
-<body>
-  <div class="wrapper">
-    <img src="image/page4.png" alt="Background" class="bg">
-    <h2 class="ownername">Atul Patel</h2>
-      <img src="image/default_image.png" alt="Profile" class="logo">
-  </div>
-</body>
+
+    .top-left {
+        align-items: center;      /* Center content horizontally */
+    }
+
+    .top-right {
+        align-items: center;     /* Center horizontally */
+    }
+
+    .heading-img {
+    font-size: 40px;  
+    }
+
+    .bg-circle {
+    width: 150px;
+    }
+
+    .para {
+      width: 200px; 
+      margin-top: 20px; 
+    }
+
+    .fingerprint {
+    position: fixed;
+    top: 60%;
+    left: 50%;                     /* Center horizontally */
+    transform: translateX(-50%);   /* Perfect horizontal center */
+    width: 105px;
+    height: 105px;
+    cursor: pointer;
+    z-index: 5;
+    }
+
+    .scan {
+    position: fixed;
+    top: 60%;
+    left: 50%;                     /* Center horizontally */
+    transform: translateX(-50%);   /* Perfect horizontal center */
+    width: 22vw;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+}
+}
+
+    </style>
+  </head>
+
+  <body>
+    <div class="top-bg-image"></div>
+    <img src="image/page4/01.png" alt="" class="text-img" />
+      <div class="top-row">
+        <div class="top-left">
+          <span class="heading-img" id="count">0</span>
+          <img src="image/page4/02.png" alt="" class="bg-circle" />
+        </div>
+        <div class="top-right">
+          <img src="image/page4/03.png" alt="" class="para" />
+        </div>
+      </div>
+    <img src="image/page4/04.png" alt="" class="fingerprint">
+        <div class="scan">
+      <div class="fingerprint"></div>
+      <!-- <h3>Scanning...</h3> -->
+    </div>
+    <!-- <a href="page4.html"><img src="image/page3/04.png" alt="" class="logo"></a> -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script>
+       $(document).ready(function() {
+    var fingerprintImage = $(".fingerprint");
+    var scanBox = $(".scan");
+
+    fingerprintImage.on("touchstart contextmenu", function(e) {
+        e.preventDefault();
+
+        $(this).css('visibility', 'hidden'); // pehla fingerprint hide
+        scanBox.css('visibility', 'visible'); // scanning wala show
+
+        setTimeout(function() {
+            scanBox.css('visibility', 'hidden');  // scan complete
+            fingerprintImage.css('visibility', 'visible'); // wapas original fingerprint show
+            window.location.href = 'page5.html'; // page redirect
+        }, 3000);
+    });
+});
+
+    </script>
+    <script>
+$(document).ready(function() {
+    $.ajax({
+        url: 'https://copd-one.vercel.app/api/get-all-records.js',
+        method: 'GET',
+        success: function(data) {
+            // Assuming the API returns an array of records
+            let totalRecords = Array.isArray(data) ? data.length : 0;
+            console.log(totalRecords);
+            // Update the span with the total count
+            $('#count').text(totalRecords + '+');
+        },
+        error: function(err) {
+            console.error('Error fetching records:', err);
+        }
+    });
+});
+</script>
+  </body>
 </html>

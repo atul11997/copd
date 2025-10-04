@@ -1,312 +1,59 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no user-scalable=no">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
-    <title>Psoriasis</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no user-scalable=no"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+      integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs="
+      crossorigin="anonymous"
+    ></script>
+    <title>COPD</title>
     <style>
-        * {
-            margin: 0;
-        }
+      * {
+        margin: 0;
+      }
 
-        .top-bg-image {
-            background: url('image/07.png') no-repeat;
-            background-size: 100% 100%;
-            width: 100%;
-            min-height: 100vh;
-            padding: 0;
-            margin: 0;
-            background-attachment: fixed;
-            background-position: 0 0;
-        }
+      .top-bg-image {
+        background: url("image/page2/page_bck.png") no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        background-attachment: fixed;
+        background-position: 0 0;
+      }
 
-        /* .text-img {
-            position: fixed;
-            top: 18vh;
-            left: 5vw;
-            width: 80vw;
-            text-align: center;
-        } */
-
-    .text-img {
+.text-img {
     position: fixed;
-    top: 0vh;
-    left: 0vw; 
-    width: 0vw; 
-    text-align: center;
-    animation: slide-in 1s ease-in-out 1s forwards; 
-   }
-       .heading-img {
+    top: 20%;                 /* Vertical placement relative to viewport */
+    right: 5%;                 /* Distance from right edge */
+    width: clamp(100px, 40vw, 350px);  /* Fluid width: min 100px, ideal 40vw, max 350px */
+    height: auto;
+    object-fit: contain;
+    z-index: 999;
+}
+
+.heading-img {
     position: fixed;
-    top: 0vh;
-    left: 0vw; 
-    width: 0vw; 
+    top: 40%;                 
+    right: 5%;                 
+    width: clamp(80px, 20vw, 200px);   /* Fluid width: min 80px, ideal 20vw, max 200px */
+    height: auto;
     text-align: center;
-    animation: slide-in-heading 1s ease-in-out 1s forwards; 
-   }
-
-@keyframes slide-in {
-    0% {
-        top: 0vh;
-        left: 5vw; 
-        width: 0vw;
-    }
-    100% {
-        top: 10vh;
-        left: 10vw;
-        width: 80vw;
-    }
+    z-index: 999;
 }
-
-@keyframes slide-in-heading {
-    0% {
-        top: 0vh;
-        left: 5vw; 
-        width: 0vw;
-    }
-    100% {
-        top: 20vh;
-        left: 10vw;
-        width: 80vw;
-    }
-}
-
-        .bg-circle {
-            position: fixed;
-            top: 25vh;
-            left: 20vw;
-            width: 60vw;
-        }
-
-        .para {
-            position: fixed;
-            bottom: 0vh;
-            left: 0vw;
-            width: 0vw;
-            animation: slide-in-text1 1s ease-in-out 1s forwards; 
-        }
-
-
-        @keyframes slide-in-text1 {
-    0% {
-        bottom: 0vh;
-        left: 0; 
-        width: 0;
-    }
-    100% {
-        bottom: 23vh;
-        left: 5vw;
-        width: 90vw;
-    }
-}
-
-        /* .logo {
-            position: fixed;
-            bottom: 0vh;
-            right: 0vw;
-            width: 0vw;
-            animation: slide-in-text2 1s ease-in-out 1s forwards; 
-        }
-
-        @keyframes slide-in-text2 {
-    0% {
-        bottom: 0vh;
-        left: 0; 
-        width: 0;
-    }
-    100% {
-        bottom: 10vh;
-        right: 40vw;
-        width: 25vw;
-    }
-} */
-.fingerprint {
-            position: fixed;
-            top: 80%;
-            left: 35%;
-            width: 105px;
-            height: 105px;
-            cursor: pointer;
-            /* transition: all 1s ease-in-out; */
-            z-index: 5;
-        }
-
-        .scan {
-            position: fixed;
-            top: 85%;
-            left: 32%;
-            width: 22vw;
-            cursor: pointer;
-            transition: all 1s ease-in-out;
-            z-index: 5;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            visibility: hidden;
-        }
-
-        .scan .fingerprint {
-            /* position: relative;
-            top: 75%;
-            left: 35%; */
-            width: 105px;
-            height: 105px;
-            background: url("image/12.png");
-            background-size: 105px;
-        }
-        
-
-        .scan .fingerprint::before {
-           content: '';
-           position: absolute;
-           top: 0;
-           left: 0;
-           width: 100%;
-           height: 100%;
-           background: url("image/12.png");
-           background-size: cover;
-           animation: animate 4s ease-in-out infinite;
-        }
-
-        @keyframes animate {
-          0%,
-          100% {
-            height: 0%;
-          }
-          50% {
-            height: 100%;
-          }
-        }
-
-.scan .fingerprint::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 8px;
-  background: #3fefef;
-  background-size: cover;
-  border-radius: 8px;
-  filter: drop-shadow(0 0 20px #3fefef) drop-shadow(0 0 60px #3fefef);
-  animation: animate_line 4s ease-in-out infinite;
-}
-
-@keyframes animate_line {
-  0%,
-  100% {
-    top: 0%;
-  }
-  50% {
-    top: 100%;
-  }
-}
-.scan h3 {
-  text-transform: uppercase;
-  font-size: 1.3em;
-  letter-spacing: 1px;
-  margin-top: 20px;
-  color: #cc4413;
-  font-family: sans-serif;
-  filter: drop-shadow(0 0 20px #3fefef) drop-shadow(0 0 60px #3fefef);
-  animation: animate_text 1s steps(1) infinite;
-  text-align: center;
-}
-@keyframes animate_text {
-  0%,
-  100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
- .animated {
-            animation: fingerprintAnimation 3s alternate, colorChange 4s infinite;
-            transform-origin: center;
-        }
-
-        @keyframes fingerprintAnimation {
-            0% {
-                transform: scale(1);
-            }
-
-            30%{
-                transform: scale(1.2);
-            }
-
-            100% {
-                transform: scale(1.2);
-            }
-        }
-
-        @keyframes colorChange {
-            0% {
-                filter: hue-rotate(0deg);
-            }
-
-            100% {
-                filter: hue-rotate(360deg);
-            }
-        }
-
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 22vw;
-            background-color: rgba(0, 0, 0, 0.7);
-            opacity: 0;
-            transition: opacity 1s;
-            z-index: 2;
-            transition: all 0.5s ease-in-out;
-        }
-
-        .overlay.active {
-            opacity: 1;
-        }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="top-bg-image"></div>
-    <img src="image/08.png" alt="" class="text-img">
-    <img src="image/09.png" alt="" class="heading-img">
-    <img src="image/10.png" alt="" class="bg-circle">
-    <img src="image/11.png" alt="" class="para">
-    <img src="image/12.png" alt="" class="fingerprint">
-        <div class="scan">
-      <div class="fingerprint"></div>
-      <!-- <h3>Scanning...</h3> -->
-    </div>
-        <script>
-       $(document).ready(function() {
-    var fingerprintImage = $(".fingerprint");
-    var scanBox = $(".scan");
-
-    fingerprintImage.on("touchstart contextmenu", function(e) {
-        e.preventDefault();
-
-        $(this).css('visibility', 'hidden'); // pehla fingerprint hide
-        scanBox.css('visibility', 'visible'); // scanning wala show
-
-        setTimeout(function() {
-            scanBox.css('visibility', 'hidden');  // scan complete
-            fingerprintImage.css('visibility', 'visible'); // wapas original fingerprint show
-            window.location.href = 'page3.html'; // page redirect
-        }, 3000);
-    });
-});
-
-    </script>
-</body>
-
+    <img src="image/page2/01.png" alt="" class="text-img" />
+    <a href="page3.html"><img src="image/page2/02.png" alt="" class="heading-img" /></a>
+  </body>
 </html>

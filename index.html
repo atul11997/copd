@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no user-scalable=no"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+      integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs="
+      crossorigin="anonymous"
+    ></script>
+    <title>COPD</title>
+    <style>
+      * {
+        margin: 0;
+      }
+
+      .top-bg-image {
+        background: url("image/page1/page1_bck.png") no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        background-attachment: fixed;
+        background-position: 0 0;
+      }
+
+      .text-img {
+        position: fixed;
+        top: 10%; /* अब top से 20px का gap रहेगा */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80vw;
+        max-width: 400px;
+        height: auto;
+        object-fit: contain;
+        text-align: center;
+      }
+.form-container {
+  position: fixed;
+  top: 30%;             /* ऊपर से 30% */
+  left: 50%;            /* स्क्रीन के बीच */
+  transform: translateX(-50%); /* पूरी तरह horizontal center */
+  width: 90%;
+  max-width: 600px;
+  z-index: 2;           
+  text-align: center;
+}
+
+/* Input Design */
+.form-input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 15px 20px;
+  border: 2px solid green;
+  border-radius: 50px;
+  font-size: 22px;
+  text-align: center;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.form-input::placeholder {
+  color: #bbb;
+  font-size: 22px;
+  text-align: center;
+}
+
+.heading-img {
+    position: fixed;
+    top: 58%;           /* Stick to top */
+    left: 50%;        /* Center horizontally */
+    transform: translateX(-50%); /* Perfect center */
+    width: 100%;      /* Full width by default */
+    max-width: 500px; /* Optional: cap max width */
+    height: auto;     /* Maintain aspect ratio */
+    text-align: center;
+    z-index: 999;     /* Stay on top of other elements */
+}
+
+.bg-circle {
+    position: fixed;
+    bottom: 30%;               /* Use % instead of vh for relative placement */
+    left: 50%;    
+    transform: translateX(-50%); /* Perfect center */          /* Relative horizontal placement */
+    width: 100%;             /* Scales with screen width */
+    max-width: 200px;       /* Optional: prevent from getting too large */
+    height: auto;           /* Maintain aspect ratio */
+    text-align: center;
+}
+#state{
+    width: 100%;
+  margin: 10px 0;
+  padding: 15px 20px;
+  border: 2px solid green;
+  border-radius: 50px;
+  font-size: 22px;
+  text-align: center;
+  outline: none;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 480px){
+  .heading-img {
+    position: fixed;
+    top: 70%;           /* Stick to top */
+    left: 50%;        /* Center horizontally */
+    transform: translateX(-50%); /* Perfect center */
+    width: 100%;      /* Full width by default */
+    max-width: 300px; /* Optional: cap max width */
+    height: auto;     /* Maintain aspect ratio */
+    text-align: center;
+    z-index: 999;     /* Stay on top of other elements */
+}
+
+#state{
+    width: 100%;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border: 2px solid green;
+  border-radius: 50px;
+  font-size: 22px;
+  text-align: center;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.bg-circle {
+    position: fixed;
+    bottom: 20%;               /* Use % instead of vh for relative placement */
+    left: 50%;    
+    transform: translateX(-50%); /* Perfect center */          /* Relative horizontal placement */
+    width: 100%;             /* Scales with screen width */
+    max-width: 100px;       /* Optional: prevent from getting too large */
+    height: auto;           /* Maintain aspect ratio */
+    text-align: center;
+}
+
+.form-container {
+  position: fixed;
+  top: 35%;             /* ऊपर से 30% */
+  left: 50%;            /* स्क्रीन के बीच */
+  transform: translateX(-50%); /* पूरी तरह horizontal center */
+  width: 90%;
+  max-width: 400px;
+  z-index: 2;           
+  text-align: center;
+}
+
+.form-input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border: 2px solid green;
+  border-radius: 50px;
+  font-size: 22px;
+  text-align: center;
+  outline: none;
+  box-sizing: border-box;
+}
+
+      .text-img {
+        position: fixed;
+        top: 15%; /* अब top से 20px का gap रहेगा */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80vw;
+        max-width: 300px;
+        height: auto;
+        object-fit: contain;
+        text-align: center;
+      }
+}
+
+    </style>
+  </head>
+
+  <body>
+    <div class="top-bg-image"></div>
+    <img src="image/page1/01.png" alt="" class="text-img" />
+<div class="form-container">
+  <input type="text" id="drname" class="form-input" placeholder="Enter Doctor name" required />
+  <input type="number" id="mslno" class="form-input" placeholder="Enter Doctor MSL No" required />
+  <input type="text" id="state" class="form-input" placeholder="Enter State" required />
+</div>
+     <img src="image/page1/02.png" alt="" class="heading-img" /> 
+    <a href="#" id="submitBtn">
+  <img src="image/page1/03.png" alt="" class="bg-circle" style="cursor:pointer;" />
+</a>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+
+$(document).ready(function () {
+  $("#submitBtn").on("click", function (e) {
+    e.preventDefault();
+
+    let drname = $("#drname").val().trim();
+    let mslno = $("#mslno").val().trim();
+    let state = $("#state").val().trim();
+
+    if (!drname || !mslno || !state) {
+      alert("⚠️ Please fill all fields");
+      return;
+    }
+
+    // Step 1: Fetch all existing records first
+    $.ajax({
+      url: "https://copd-one.vercel.app/api/get-all-records.js",  // Your API to get all records
+      type: "GET",
+      success: function (records) {
+        // Step 2: Check if drname already exists (case-insensitive)
+        let isDuplicate = records.some(record => 
+          record.drname.trim().toLowerCase() === drname.toLowerCase()
+        );
+
+        if (isDuplicate) {
+          alert("⚠️ Doctor name already exists!");
+          return; // stop submission
+        }
+
+        // Step 3: If no duplicate, then submit data
+        $.ajax({
+          url: "/api/submit-form.js",
+          type: "POST",
+          contentType: "application/json",
+          data: JSON.stringify({
+            drname: drname,
+            mslno: mslno,
+            state: state,
+          }),
+          success: function (response) {
+            alert("✅ Data saved successfully!");
+            window.location = "page2.html";
+          },
+          error: function (xhr, status, error) {
+            console.error("❌ Error:", error);
+          },
+        });
+      },
+      error: function (xhr, status, error) {
+        console.error("❌ Error fetching records:", error);
+        alert("⚠️ Could not verify duplicates. Try again later.");
+      }
+    });
+  });
+});
+</script>
+
+  </body>
+</html>

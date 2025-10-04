@@ -1,280 +1,109 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no user-scalable=no">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
-    <title>Psoriasis</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no user-scalable=no"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+      integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs="
+      crossorigin="anonymous"
+    ></script>
+    <title>COPD</title>
     <style>
-        * {
-            margin: 0;
-        }
+      * {
+        margin: 0;
+      }
 
-        .top-bg-image {
-            background: url('image/13.png') no-repeat;
-            background-size: 100% 100%;
-            width: 100%;
-            min-height: 100vh;
-            padding: 0;
-            margin: 0;
-            background-attachment: fixed;
-            background-position: 0 0;
-        }
+      .top-bg-image {
+        background: url("image/page3/bck.png") no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        background-attachment: fixed;
+        background-position: 0 0;
+      }
 
-        /* .text-img {
-            position: fixed;
-            top: 18vh;
-            left: 5vw;
-            width: 80vw;
-            text-align: center;
-        } */
-         .form-controller{
-            position: fixed;
-            top: 52vh;
-            left: 10vw;
-         }
-         #empcode{
-            border: solid 1px #cc4413;
-            border-radius: 5px;
-            background-color: white;
-            color: dimgray;
-            height: 23px;
-            padding: 4px;
-            font-weight: bold;
-            text-align: center;
-            position: fixed;
-            top: 40vh;
-            left: 10vw;
-            width: 80vw;
-         }
-         #drname{
-            border: solid 1px #cc4413;
-            border-radius: 5px;
-            background-color: white;
-            color: dimgray;
-            height: 23px;
-            padding: 4px;
-            font-weight: bold;
-            text-align: center;
-            position: fixed;
-            top: 45vh;
-            left: 10vw;
-            width: 80vw;
-         }
-
-         #state{
-
-            border: solid 1px #cc4413;
-            border-radius: 5px;
-            background-color: white;
-            color: dimgray;
-            height: 35px;
-            padding: 4px;
-            font-weight: bold;
-            text-align: center;
-            position: fixed;
-            top: 50vh;
-            left: 10vw;
-            width: 82vw;
-         }
-        #drphone{
-            border: solid 1px #cc4413;
-            border-radius: 5px;
-            background-color: white;
-            color: dimgray;
-            height: 23px;
-            padding: 4px;
-            font-weight: bold;
-            text-align: center;
-            position: fixed;
-            top: 55vh;
-            left: 10vw;
-            width: 80vw;
-         }
-        #email{
-            border: solid 1px #cc4413;
-            border-radius: 5px;
-            background-color: white;
-            color: dimgray;
-            height: 23px;
-            padding: 4px;
-            font-weight: bold;
-            text-align: center;
-            position: fixed;
-            top: 60vh;
-            left: 10vw;
-            width: 80vw;
-         }
-        #drimage{
-            border: solid 1px #cc4413;
-            border-radius: 5px;
-            background-color: white;
-            color: dimgray;
-            height: 23px;
-            padding: 4px;
-            font-weight: bold;
-            text-align: center;
-            position: fixed;
-            top: 65vh;
-            left: 10vw;
-            width: 80vw;
-        }
-        input[type="file"] {
-            direction: rtl; /* Reverses the layout to move "Choose File" to the right */
-            text-align: right; /* Aligns text to the right */
-        }
-
-
-    .text-img {
-    position: fixed;
-    top: 0vh;
-    left: 0vw; 
-    width: 0vw; 
-    text-align: center;
-    animation: slide-in 1s ease-in-out 1s forwards; 
-   }
-    #form-heading {
-    position: fixed;
-    top: 35vh;
-    left: 25vw;
-    font-size: 20px;
-    color: #FFFF00;
-   }
-
-@keyframes slide-in {
-    0% {
-        top: 0vh;
-        left: 5vw; 
-        width: 0vw;
-    }
-    100% {
-        top: 25vh;
-        left: 10vw;
+      .text-img {
+        position: fixed;
+        top: 20%; /* अब top से 20px का gap रहेगा */
+        left: 50%;
+        transform: translateX(-50%);
         width: 80vw;
-    }
+        max-width: 500px;
+        height: auto;
+        object-fit: contain;
+        text-align: center;
+      }
+
+.heading-img {
+    position: fixed;
+    top: 28%;           /* Stick to top */
+    left: 50%;        /* Center horizontally */
+    transform: translateX(-50%); /* Perfect center */
+    width: 100%;      /* Full width by default */
+    max-width: 500px; /* Optional: cap max width */
+    height: auto;     /* Maintain aspect ratio */
+    text-align: center;
+    z-index: 999;     /* Stay on top of other elements */
 }
 
-#heading-count{
-            position: fixed;
-            top: 12vh;
-            left: 20vw;
-            font-size: 70px;
-            color: #fff;
+.bg-circle {
+    position: fixed;
+    top: 53%;                 
+    left: 50%;
+    transform: translateX(-50%);  /* Keep perfectly centered */
+    width: clamp(80px, 90%, 600px); /* Min 80px, ideal 90% of viewport, max 600px */
+    height: auto;                
+    text-align: center;
 }
-        .bg-circle {
-            position: fixed;
-            top: 71vh;
-            left: 20vw;
-            width: 50vw;
-        }
 
-        /* .para {
-            position: fixed;
-            bottom: 0vh;
-            left: 0vw;
-            width: 0vw;
-            animation: slide-in-text1 1s ease-in-out 1s forwards; 
-        }
-
-
-        @keyframes slide-in-text1 {
-    0% {
-        bottom: 0vh;
-        left: 0; 
-        width: 0;
+.logo {
+    position: fixed;
+    bottom: 10%;           /* Distance from bottom, relative to viewport */
+    right: 10%;            /* Distance from right, relative to viewport */
+    width: 200px;  /* Fluid width: min 50px, ideal 10vw, max 150px */
+    height: auto;         /* Maintain aspect ratio */
+    z-index: 999;         /* Stay above other elements */
+    animation: none;      /* Remove animation */
+}
+@media screen and (max-width: 480px){
+    .logo {
+    position: fixed;
+    bottom: 10%;           /* Distance from bottom, relative to viewport */
+    right: 10%;            /* Distance from right, relative to viewport */
+    width: 100px;  /* Fluid width: min 50px, ideal 10vw, max 150px */
+    height: auto;         /* Maintain aspect ratio */
+    z-index: 999;         /* Stay above other elements */
+    animation: none;      /* Remove animation */
     }
-    100% {
-        bottom: 30vh;
-        left: 25vw;
-        width: 50vw;
-    }
-} */
 
-        .logo {
-            position: fixed;
-            bottom: 0vh;
-            right: 0vw;
-            width: 0vw;
-            animation: slide-in-text2 1s ease-in-out 1s forwards; 
-        }
-
-        @keyframes slide-in-text2 {
-    0% {
-        bottom: 0vh;
-        left: 0; 
-        width: 0;
-    }
-    100% {
-        bottom: 5vh;
-        right: 5vw;
-        width: 40vw;
-    }
+    .heading-img {
+    position: fixed;
+    top: 28%;           /* Stick to top */
+    left: 50%;        /* Center horizontally */
+    transform: translateX(-50%); /* Perfect center */
+    width: 100%;      /* Full width by default */
+    max-width: 300px; /* Optional: cap max width */
+    height: auto;     /* Maintain aspect ratio */
+    text-align: center;
+    z-index: 999;     /* Stay on top of other elements */
+  }
 }
 
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="top-bg-image"></div>
-    <h1 id="heading-count">10000+</h1>
-    <img src="image/14.png" alt="" class="text-img">
-    <h1 id="form-heading">Fill Details Below</h1>
-    <form method="post" action="#" class="form-controller">
-        <div class="row">
-            <input type="text" name="emp_code" id="empcode" placeholder="Enter Employee Code">
-            <input type="text" name="drname" id="drname" placeholder="Enter Doctor Name">
-            <select name="state" id="state" placeholder="Select State">
-                <option>Select State</option>
-                <option>Andhra Pradesh</option>
-                <option>Arunachal Pradesh</option>
-                <option>Assam</option>
-                <option>Bihar</option>
-                <option>Chandigarh</option>
-                <option>Chattisgarh</option>
-                <option>Dadra And Nagar Haveli</option>
-                <option>Daman & Diu</option>
-                <option>Delhi</option>
-                <option>Goa</option>
-                <option>Gujarat</option>
-                <option>Haryana</option>
-                <option>Himachal Pradesh</option>
-                <option>Jammu And Kashmir</option>
-                <option>Jharkhand</option>
-                <option>Karnataka</option>
-                <option>Kerala</option>
-                <option>Lakshadweep</option>
-                <option>Madhya Pradesh</option>
-                <option>Maharashtra</option>
-                <option>Manipur</option>
-                <option>Meghalaya</option>
-                <option>Mizoram</option>
-                <option>Nagaland</option>
-                <option>Odisha</option>
-                <option>Pondicherry</option>
-                <option>Punjab</option>
-                <option>Rajasthan</option>
-                <option>Sikkim</option>
-                <option>Tamil Nadu</option>
-                <option>Telangana</option>
-                <option>Tripura</option>
-                <option>Uttar Pradesh</option>
-                <option>Uttarakhand</option>
-                <option>West Bengal</option>
-            </select>
-            <input type="number" name="drphone" id="drphone" placeholder="Enter Doctor Phone">
-            <input type="text" name="email" id="email" placeholder="Enter Email Address">
-            <input type="file" name="drimage" id="drimage" placeholder="Doctor Image">
-        </div>
-    </form>
-    <img src="image/19.png" alt="" class="bg-circle"> 
-    <!-- <img src="image/17.png" alt="" class="para">
-    <img src="image/18.png" alt="" class="bg-circle">
-    <img src="image/19.png" alt="" class="para">  -->
-    <a href="page4.html"><img src="image/20.png" alt="" class="logo"></a>
-    </script>
-</body>
-
+    <img src="image/page3/01.png" alt="" class="text-img" />
+     <img src="image/page3/02.png" alt="" class="heading-img" /> 
+    <img src="image/page3/03.png" alt="" class="bg-circle" />
+    <a href="page4.html"><img src="image/page3/04.png" alt="" class="logo"></a>
+  </body>
 </html>
